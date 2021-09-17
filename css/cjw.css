@@ -130,11 +130,11 @@ header {
 }
 .btn_nav span {
     position:absolute;
-    right:0%;  /* 35 / 750 */
+    right:0;  
 	top:0;
-	background-color:#000;
+	background-color:#595959;
     width:24px;
-	height:4px;
+	height:3px;
 	border-radius:4px;
     transition:.6s;
     text-indent:-9999px;
@@ -148,12 +148,15 @@ header {
 	top:14px;
 }
 
+.btn_nav.on {
+    right:6.667%;
+}
 .btn_nav.on span:nth-child(1) {
-    top:7px;
+    top:9px;
     transform:rotate(45deg);
 }
 .btn_nav.on span:nth-child(3) {
-    top:7px;
+    top:9px;
     transform:rotate(-45deg);
 }
 .btn_nav.on span:nth-child(2) {
@@ -182,14 +185,14 @@ header {
 	width:67.733%;  /* 508 / 750 */
 	height:100%;
 	padding-top:31px;
-	overflow-y:auto;
+	
 }
+.gnb_wrap {}
 .nav_inner > div {
-	width:83.071%;  /* 422 / 508 */
 	margin-left:7.087%;  /* 36 / 508 */
 	margin-bottom:24px;
 }
-.nav_inner > div a:nth-child(1) {
+.nav_inner > div a {
 	float:left;
 	background:url(../img/cjw-logo-header.png) no-repeat;
 	background-size:contain;
@@ -200,8 +203,9 @@ header {
 }
 .nav_inner .gnb {
 	border-top:2px solid #595959;
-	width:83.071%;  /* 422 / 508 */
-	margin-left:7.087%;  /* 36 / 508 */
+	width:100%; 
+    height:calc(100% - 46px); /* margin-bottom + img-height */
+    overflow-y:auto;
 }
 .nav_inner .gnb > li {}
 .nav_inner .gnb > li > a {
@@ -209,32 +213,62 @@ header {
 	position:relative;
 	height:60px;
 	line-height:59px;
-	border-bottom:1px solid #959595;
-	padding-left:4.502%;  /* 19 / 422 */
+	border-bottom:1px solid #cfcfcf;;
+	padding-left:10.433%; 
 	font-size:1.7rem;
-	color:#747474;
+	color:#595959;
 }
 .nav_inner .gnb > li.open + li > a {
-	border-top:1px solid #959595;
+	border-top:1px solid #cfcfcf;;
 }
-.nav_inner .gnb > li:last-child > a {
+.nav_inner .gnb > li:nth-of-type(6) > a {
 	border-bottom:none;
 }
 .nav_inner .gnb > li:last-child.open > a {
-	border-bottom:1px solid #959595;
+	border-bottom:1px solid #cfcfcf;
 }
 .nav_inner .gnb > li > a span {
 	position:absolute;
-	right:2.844%;  /* 12 / 422*/
+	right:12.205%;
 	top:50%;
 	margin-top:-4px;
 	background:url(../img/cjw-arrow-nav-bottom.png) no-repeat;
 	background-size:contain;
 	width:15px;
 	height:8px;
+    transition:.3s;
 }
+
+.nav_inner .gnb > li.banner > a {
+	background-color:#02b5d6;
+	height:58px;
+	line-height:56px;
+	border-bottom:2px solid rgba(255,255,255,.5);
+	color:#fff;
+}
+.nav_inner .gnb > li.banner:last-child > a {
+	height:57px;
+	line-height:57px;
+	border-bottom:none;
+}
+.nav_inner .gnb > li.banner > a:after {
+	content:"";
+	position:absolute;
+	right:12.008%;
+	top:50%;
+	margin-top:-14px;
+	background:url(../img/cjw-icon-login.png) no-repeat;
+	background-size:contain;
+	width:27px;
+	height:27px;
+}
+.nav_inner .gnb > li.banner:last-child > a:after {
+	background-image:url(../img/cjw-icon-phone.png);
+	right:11.220%;
+}
+
 .nav_inner .gnb > li.open > a span {
-	background-image:url(../img/cjw-arrow-nav-top.png);
+	transform:rotate(180deg);
 }
 
 .nav_inner .sub_wrap {
@@ -249,57 +283,22 @@ header {
 .nav_inner .sub_wrap ul {
 	background-color:#f8f8f8;
 }
-.nav_inner .sub_wrap ul li {
-	width:89.573%;  /* 378 / 422 */
-	margin-left:4.502%;  /* 19 / 422 */
-	border-bottom:1px solid #cfcfcf;
-}
-.nav_inner .sub_wrap ul:last-child li:last-child {
-	border-bottom:none;
-}
+
 .nav_inner .sub_wrap ul li a {
 	display:block;
 	height:45px;
 	line-height:45px;
 	font-size:1.4rem;
 	color:#747474;
-	padding-left:5.820%;  /* 22 / 378 */
+	padding-left:14.764%;  
+}
+.nav_inner .sub_wrap ul li a:hover,
+.nav_inner .sub_wrap ul li a:focus {
+    color:#000;
 }
 .nav_inner .sub_wrap .right {}
 .nav_inner .sub_wrap .right h3 {}
 .nav_inner .sub_wrap .right a {}
-
-.nav_inner > a {
-	display:block;
-	position:relative;
-	background-color:#02b5d6;
-	height:58px;
-	line-height:56px;
-	border-bottom:2px solid rgba(255,255,255,.5);
-	padding-left:11.024%;  /* 56 / 508 */
-	font-size:1.7rem;
-	color:#fff;
-}
-.nav_inner > a:last-child {
-	height:57px;
-	line-height:57px;
-	border-bottom:none;
-}
-.nav_inner > a:after {
-	content:"";
-	position:absolute;
-	right:10.433%;  /* 53 / 508 */
-	top:50%;
-	margin-top:-14px;
-	background:url(../img/cjw-icon-login.png) no-repeat;
-	background-size:contain;
-	width:27px;
-	height:27px;
-}
-.nav_inner > a:last-child:after {
-	background-image:url(../img/cjw-icon-phone.png);
-	right:9.843%;  /* 50 / 508 */
-}
 
 body.no-scroll {
     overflow:hidden;
@@ -1150,15 +1149,15 @@ footer {
     
     
     .btn_nav {
-        right:5.078%;  /* 39 / 758 */
+        right:5.208%;  
         top:32px;
-        width:45px;
-        height:29px;
+        width:40px;
+        height:28px;
     }
     .btn_nav span {
-        width:42px;
-        height:6px;
-        border-radius:6px;
+        width:35px;
+        height:5px;
+        border-radius:5px;
     }
     .btn_nav span:nth-child(2) {
         top:10px;
@@ -1166,25 +1165,30 @@ footer {
     .btn_nav span:nth-child(3) {
         top:20px;
     }
+    .btn_nav.on {
+        right:6.4%;
+    }
+
     .nav_inner { 
         width:66.146%;  /* 508 / 768 */
         padding-top:29px;
     }
     .nav_inner > div {
+        margin-left:7.087%;
         margin-bottom:16px;
     }
-    .nav_inner > div a:nth-child(1) {
+    .nav_inner > div a {
         width:100px;
         height:35px;
     }
-    .nav_inner > div a:nth-child(2) {
-        line-height:35px;
-        font-size:2.1rem;
+    .nav_inner .gnb {
+        height:calc(100% - 51px); /* margin-bottom + img-height */
+        overflow-y:auto;
     }
     .nav_inner .gnb > li > a {
         height:91px;
         line-height:90px;
-        padding-left:4.265%;  /* 18 / 422 */
+        padding-left:10.433%;  
         font-size:2.5rem;
     }
     
@@ -1198,27 +1202,21 @@ footer {
         height:69px;
         line-height:69px;
         font-size:2.1rem;
-        padding-left:5.556%;  /* 21 / 378 */
     }
-    .nav_inner > a {
+    .nav_inner .gnb > li.banner > a {
         height:100px;
         line-height:98px;
-        padding-left:10.63%;  /* 54 / 508 */
-        font-size:2.5rem;
     }
-    .nav_inner > a:last-child {
+    .nav_inner .gnb > li.banner:last-child > a {
         height:100px;
         line-height:100px;
     }
-    .nav_inner > a:after {
-        right:12.008%;  /* 61 / 508 */
+    .nav_inner .gnb > li.banner > a:after {
         margin-top:-20px;
         width:40px;
         height:40px;
     }
-    .nav_inner > a:last-child:after {
-        right:11.220%;  /* 57 / 508 */
-    }
+  
 
     /* visual - 768 */
     #visual {
@@ -1944,9 +1942,7 @@ footer {
         height:12px;
         margin-left:20px;
     }
-    .nav_inner > a {
-        display:none;
-    }
+   
     .nav_inner li:nth-child(2) .sub_wrap .right {
         background-image:url(../img/cjw-bg-nav-foodCast.jpg);
     }
@@ -2308,10 +2304,7 @@ footer {
         padding-left:350px;
         }
   
-    .nav_inner > a {
-        display:none;
-        
-    }
+  
     .slider > button {
         display:block;
         position:absolute;
