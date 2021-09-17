@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
 /* font */
-@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @font-face {
 	font-family:"nbg";
 	src:url(fonts/NanumBarunGothic.woff);
