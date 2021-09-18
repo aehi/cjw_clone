@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
 /* font */
-@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 @font-face {
 	font-family:"nbg";
 	src:url(fonts/NanumBarunGothic.woff);
@@ -15,11 +15,12 @@ header,footer,main,aside,nav,section,article,
 a,span,strong,em,b,i,address {margin:0; padding:0; box-sizing:border-box;}
 html {font-size:0.625em;} /* 10px / 16 */
 body,h1,h2,h3,h4,h5,h6,button {
-	font-family:"Spoqa Han Sans","돋움",dotum,sans-serif;
+	font-family:"Noto Sans KR","돋움",dotum,sans-serif;
 	line-height:1;
+    color:#333;
 }
 ul,ol,li {list-style:none;}
-a {text-decoration:none;}
+a {text-decoration:none; color:#333;}
 img,fieldset {border:none; vertical-align:middle;}
 strong,em,b,i,address {font-weight:normal; font-style:normal;}
 table {border-collapse:collapse;}
@@ -107,7 +108,6 @@ header {
 	margin:22px 2.133% 0;  /* 16 / 750 */
 	padding-left:10px;
 	font-size:1.6rem;
-	color:#000;
 }
 .sch_wrap .sch_form .btn_sch {
 	background:url(../img/cjw-icon-search2.png) no-repeat #777 center;
@@ -216,7 +216,7 @@ header {
 	border-bottom:1px solid #cfcfcf;;
 	padding-left:10.433%; 
 	font-size:1.7rem;
-	color:#595959;
+	
 }
 .nav_inner .gnb > li.open + li > a {
 	border-top:1px solid #cfcfcf;;
@@ -289,7 +289,7 @@ header {
 	height:45px;
 	line-height:45px;
 	font-size:1.4rem;
-	color:#747474;
+	color:#595959;
 	padding-left:14.764%;  
 }
 .nav_inner .sub_wrap ul li a:hover,
@@ -330,6 +330,7 @@ body.no-scroll {
 	font-size:4.3rem;
 	font-weight:normal;
 	margin:14px 0 18px;
+    color:#fff;
 }
 .img_wrap p {
 	font-size:1.4rem;
@@ -606,13 +607,12 @@ body.no-scroll {
 .cast_inner .banner h3 {
     font-size:2rem;
     font-weight:normal;
-    color:#000;
+    color:#222;
     margin-bottom:9px;
 }
 .cast_inner .banner p {
     font-size:1.1rem;
     line-height:1.182; /* 26/22 */
-    color:#000;
 }
 .cast_inner .banner span {}
 .cast_inner .banner:after {
@@ -717,13 +717,12 @@ body.no-scroll {
 .knowhow_inner .banner h3 {
     font-size:2rem;
     font-weight:normal;
-    color:#000;
+    color:#222;
     margin-bottom:9px;
 }
 .knowhow_inner .banner p {
     font-size:1.1rem;
     line-height:1.182;
-    color:#000;
 }
 
 .knowhow_inner .banner_wrap .banner {
@@ -784,7 +783,6 @@ body.no-scroll {
     overflow:hidden;
     padding:24px 18px;
     background-color:#f4cb4d;
-    color:#000;
 }
 
 .friends_inner .friends_b .bg {
@@ -800,6 +798,7 @@ body.no-scroll {
     font-size:1.8rem;
     line-height:1.111;
     font-weight:normal;
+    color:#222;
 }
 .friends_inner .friends_b .line {
     display:block;
@@ -874,7 +873,6 @@ body.no-scroll {
     padding-top:70px;
     background:url(../img/cjw-icon-foodEditor.png) no-repeat top center;
     background-size:62px;
-    color:#000;
     font-size:1.2rem;
     font-weight:normal;
 }
@@ -899,7 +897,6 @@ body.no-scroll {
     font-family:"nbg","돋움",dotum,sans-serif;
     font-size:3.3rem;
     font-weight:normal;
-    color:#000; 
     margin-bottom:14px; 
 }
 .sns_inner .title p {
@@ -983,21 +980,22 @@ body.no-scroll {
 }
 .sns_inner .sns_con a .text h3 {
     font-size:1.3rem;
-    color:#000;
     font-weight:normal;
     background:url(../img/cjw-sns-blog.png) no-repeat right center;
     background-size:contain; 
     height:18px;
     line-height:18px;
+    color:#494949;
 }
 .sns_inner .sns_con a:last-child .text h3 {
     background-image:url(../img/cjw-sns-facebook.png);
+    
 }
 .sns_inner .sns_con a .text p {
     position:absolute;
     left:10px;
     bottom:14px;
-    color:#494949;
+    
     font-size:1.3rem;
     line-height:1.077;
     padding-right:8px; 
@@ -1666,13 +1664,13 @@ footer {
         margin-bottom:44px; 
     }
     .copy_wrap .copy p span {
-        font-size:2.2rem;
+        font-size:1.8rem;
     }
     .copy_wrap .copy p span:first-child:after {
         margin:0 22px;
     }
     .copy_wrap .copy p:last-child {
-        font-size:1.8rem;
+        font-size:1.4rem;
         height:88px;
         line-height:88px; 
         margin-top:57px;
@@ -1806,7 +1804,6 @@ footer {
     .nav_inner .gnb > li:before {
         content:"|";
         font-size:1.6rem;
-        color:#000;
         margin:0 20px;
     }
     .nav_inner .gnb > li:first-child:before {
@@ -1819,7 +1816,6 @@ footer {
         border-bottom:none;
         padding-left:0;
         font-size:1.6rem;
-        color:#000;
     }
     header.on .nav_inner .gnb > li > a {
         height:70px;
@@ -1896,7 +1892,6 @@ footer {
         height:auto;
         line-height:1;
         font-size:2rem;
-        color:#000;
         padding-left:0;  /* 22 / 378 */
     }
     .nav_inner .sub_wrap ul li a:hover,
@@ -1913,7 +1908,6 @@ footer {
     .nav_inner .sub_wrap .right h3 {
         font-size:3.4rem;
         font-weight:normal;
-        color:#000;
     }
     .nav_inner .sub_wrap .right i {
         display:block;
@@ -2143,7 +2137,6 @@ footer {
     .cast_inner .section_slider a h3 {
         font-size:3.3rem;
         font-weight:normal;
-        color:#000; 
     }
     .cast_inner .banner:last-child h3 {
         color:#fff; 
@@ -2165,7 +2158,6 @@ footer {
     }
     .cast_inner .section_slider a strong {
         font-size:2.1rem;
-        color:#000; 
     }
     .cast_inner .section_slider a p {
         font-size:1.7rem;
@@ -2186,7 +2178,6 @@ footer {
     }
     .cast_inner .banner:last-child span{
         background-color:#fff;
-        color:#000;
     }
     .cast_inner .banner {
         float:left;
@@ -2219,7 +2210,7 @@ footer {
     .cast_inner .banner:after {
        display:none; 
     }
-
+}
 
 /* pc - 1276 */
 @media all and (min-width:1276px){
@@ -2348,7 +2339,8 @@ footer {
     .story_inner article:nth-child(3) {
         margin-right:0; 
     }
-     #story .story_inner article:nth-child(3) {display:block;}
+    #story .story_inner article:nth-child(3) {display:block;}
+
 }
 
 
