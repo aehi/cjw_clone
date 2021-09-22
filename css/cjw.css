@@ -22,7 +22,7 @@ body,h1,h2,h3,h4,h5,h6,button {
 ul,ol,li {list-style:none;}
 a {text-decoration:none; color:#333;}
 img,fieldset {border:none; vertical-align:middle;}
-strong,em,b,i,address {font-weight:normal; font-style:normal;}
+strong,em,b,i,address {font-weight:400; font-style:normal;}
 table {border-collapse:collapse;}
 button {
 	border:none;
@@ -327,7 +327,7 @@ body.no-scroll {
 .img_wrap h2 {
 	font-family:"nbg","돋움",dotum,sans-serif;
 	font-size:4.3rem;
-	font-weight:normal;
+	font-weight:400;
 	margin:14px 0 18px;
     color:#fff;
 }
@@ -438,13 +438,13 @@ body.no-scroll {
 	display:block;
 }
 .story_inner article p {
-	line-height:1.154;  /* 30 / 26 */
+	line-height:1.333;
 	font-size:1.3rem;
 	color:#343434;
 	margin:8px 0 15px;
 }
 .story_inner article a {
-	display:block;
+	display:inline-block;
 	width:150px;
 	height:35px;
 	line-height:31px;
@@ -537,7 +537,7 @@ body.no-scroll {
 .cast_inner .title h2 {
     font-size:3.3rem;
     color:#fff;
-    font-weight:normal;
+    font-weight:400;
     font-family:"nbg","돋움",dotum,sans-serif;
     margin-bottom:12px;
 }
@@ -605,7 +605,7 @@ body.no-scroll {
 }
 .cast_inner .banner h3 {
     font-size:2rem;
-    font-weight:normal;
+    font-weight:400;
     color:#222;
     margin-bottom:9px;
 }
@@ -626,6 +626,7 @@ body.no-scroll {
     height:29px;
 }
 
+/* knowhow - mobile */
 #knowhow {
     background-color:#f8f8f8;
     padding-bottom:36px;
@@ -642,7 +643,7 @@ body.no-scroll {
     margin-bottom:14px; 
     font-size:3.3rem;
     color:#fff;
-    font-weight:normal;
+    font-weight:400;
     font-family:"nbg","돋움",dotum,sans-serif;
 }
 .knowhow_inner .title a {
@@ -712,10 +713,10 @@ body.no-scroll {
     width:16px;
     height:29px; 
 }
-
+.knowhow_inner .banner.pc {display:none;}
 .knowhow_inner .banner h3 {
     font-size:2rem;
-    font-weight:normal;
+    font-weight:400;
     color:#222;
     margin-bottom:9px;
 }
@@ -728,11 +729,12 @@ body.no-scroll {
     background-color:#f4cb4d;
     margin-bottom:0; 
 }
+
 .knowhow_inner .banner_wrap .banner3 {
     background-image:url(../img/cjw-icon-eShop.png);
 }
 
-
+/* friend - mobile */
 #friends {
     background-color:#f8f8f8;
     padding-bottom:32px; 
@@ -748,7 +750,7 @@ body.no-scroll {
 .friends_inner .title h2 {
     font-size:3.3rem;
     color:#fff;
-    font-weight:normal;
+    font-weight:400;
     font-family:"nbg","돋움",dotum,sans-serif;
     margin-bottom:12px;
 }
@@ -796,7 +798,7 @@ body.no-scroll {
 .friends_inner .friends_b strong {
     font-size:1.8rem;
     line-height:1.111;
-    font-weight:normal;
+    font-weight:400;
     color:#222;
 }
 .friends_inner .friends_b .line {
@@ -826,17 +828,17 @@ body.no-scroll {
     padding:25px 60px 25px 106px;
     background:url(../img/cjw-icon-friendsPanel.png) no-repeat #00b5d8 20px center;
     background-size:71px;
-    color:#fff;
 }
 .friends_inner .banner:nth-of-type(2) h3 {
     font-size:1rem;
-    font-weight:normal;
+    font-weight:400;
     margin-bottom:9px;
     color:#fff;
 }
 .friends_inner .banner:nth-of-type(2) p {
     font-size:1.2rem;
     line-height:1.182;
+    color:#fff;
 }
 .friends_inner .banner:after {
     content:"";
@@ -873,7 +875,7 @@ body.no-scroll {
     background:url(../img/cjw-icon-foodEditor.png) no-repeat top center;
     background-size:62px;
     font-size:1.2rem;
-    font-weight:normal;
+    font-weight:400;
 }
 .friends_inner .box .bannerBox:last-child h3 {
     background-image:url(../img/cjw-icon-meetingTalk.png); 
@@ -895,7 +897,7 @@ body.no-scroll {
 .sns_inner .title h2 {
     font-family:"nbg","돋움",dotum,sans-serif;
     font-size:3.3rem;
-    font-weight:normal;
+    font-weight:400;
     margin-bottom:14px; 
 }
 .sns_inner .title p {
@@ -979,12 +981,12 @@ body.no-scroll {
 }
 .sns_inner .sns_con a .text h3 {
     font-size:1.3rem;
-    font-weight:normal;
+    font-weight:400;
     background:url(../img/cjw-sns-blog.png) no-repeat right center;
     background-size:contain; 
     height:18px;
     line-height:18px;
-    color:#494949;
+    
 }
 .sns_inner .sns_con a:last-child .text h3 {
     background-image:url(../img/cjw-sns-facebook.png);
@@ -994,13 +996,13 @@ body.no-scroll {
     position:absolute;
     left:10px;
     bottom:14px;
-    
+    color:#494949;
     font-size:1.3rem;
     line-height:1.077;
     padding-right:8px; 
 }
 
-/* footer */
+/* footer - mobile */
 footer {
     background-color:#fbfbfb;
     border-top:1px solid #cfcfcf;
@@ -1035,6 +1037,8 @@ footer {
     color:#767676;
     padding-left:17.866%; /* 8.3933% * 2 부모가 li이라 전체가 아니라 절반 */
 }
+
+.link_wrap ul li.pc {display:none;}
 .link_wrap ul li a:hover,
 .link_wrap ul li a:focus {color:#222;}
 
@@ -1076,17 +1080,16 @@ footer {
     width:100%;
 }
 .copy_wrap .copy p {
-    font-size:0;
     color:#666;
-    line-height:1.455; 
 }
 .copy_wrap .copy p span {
     font-size:1.1rem;
+    line-height:1.455;
 }
-.copy_wrap .copy p span:first-child:after {
+.copy_wrap .copy p span:nth-of-type(5):after {
     content:"ㅣ";
     color:#666;
-    margin:0 11px;
+    margin:0 10px;
 }
 .copy_wrap .copy p span:last-child {
     display:block;
@@ -1221,17 +1224,17 @@ footer {
     }
     .img_wrap {
         height:750px;
-        padding-top:185px;
+        padding-top:190px;
     }
     .img_wrap > span {
         font-size:3rem;
     }
     .img_wrap h2 {
-        font-size:7rem;
-        margin:25px 0 25px;
+        font-size:7.5rem;
+        margin:23px 0 23px;
     }
     .img_wrap p {
-        font-size:2.2rem;
+        font-size:2.3rem;
         line-height:1.208; 
         width:80.99%;  /* 622 / 768 */
         margin-bottom:35px;
@@ -1241,7 +1244,7 @@ footer {
         height:70px;      
         line-height:66px;
         border-radius:3px;
-        font-size:2rem;
+        font-size:2.1rem;
     }
 
     
@@ -1305,12 +1308,10 @@ footer {
         margin-bottom:10px;
     }
     .story_inner article p {
-        line-height:1.176;  /* 20 / 17 */
-        font-size:1.7rem;
-        margin:8px 0 29px;
+        font-size:1.6rem;
+        margin:8px 0 28px;
     }
     .story_inner article a {
-        display:inline-block;
         width:auto;
         height:45px;
         line-height:41px;
@@ -1358,10 +1359,10 @@ footer {
         font-size:2rem;
     }
     .cast_inner .title a:after {
-        width:19px;
-        height:20px;
+        width:18px;
+        height:17px;
         margin-left:36px; 
-        vertical-align:-2px; 
+        vertical-align:-1px; 
     }
     .cast_inner .section_slider {
         width:84.375%; /* 648/ 768 *100 */ 
@@ -1402,6 +1403,7 @@ footer {
         height:55px;
     }
 
+    /* knowhow - 768 */
     #knowhow {
         padding-bottom:106px;
     }
@@ -1421,10 +1423,10 @@ footer {
         font-size:2rem;
     }
     .knowhow_inner .title a:after {
-        width:19px;
-        height:20px;
+        width:18px;
+        height:17px;
         margin-left:36px; 
-        vertical-align:-2px; 
+        vertical-align:-1px; 
     }
     .knowhow_inner .section_slider {
         width:84.375%; 
@@ -1473,7 +1475,7 @@ footer {
         background-size:100px;
     }
     
-    
+    /* friend - 768 */
     #friends {
         padding-bottom:63px;
     }
@@ -1494,10 +1496,10 @@ footer {
         font-size:2rem;
     }
     .friends_inner .title a:after{
-        width:19px;
-        height:20px;
+        width:18px;
+        height:17px;
         margin-left:36px; 
-        vertical-align:-2px; 
+        vertical-align:-1px; 
     }
     .friends_inner .banner {
         width:84.375%;
@@ -1624,7 +1626,7 @@ footer {
         padding-right:19px; 
     }
     
-    /* footer */
+    /* footer - 768 */
    
     .link_wrap > a,
     .link_wrap ul li,
@@ -1664,8 +1666,8 @@ footer {
     .copy_wrap .copy p span {
         font-size:1.8rem;
     }
-    .copy_wrap .copy p span:first-child:after {
-        margin:0 22px;
+    .copy_wrap .copy p span:nth-of-type(5):after {
+        margin:0 21px;
     }
     .copy_wrap .copy p:last-child {
         font-size:1.4rem;
@@ -1906,7 +1908,7 @@ footer {
     }
     .nav_inner .sub_wrap .right h3 {
         font-size:3.3rem;
-        font-weight:normal;
+        font-weight:400;
     }
     .nav_inner .sub_wrap .right i {
         display:block;
@@ -1986,13 +1988,16 @@ footer {
 
 
       /* visual - 1024 */
-    #visual {margin-top:0;}
+    #visual {
+        height:638px;
+        margin-top:0;
+    }
     header.on + #visual {margin-top:70px;}
         
 
     .img_wrap {
-        height:750px;
-        padding-top:180px;
+        height:638px;
+        padding-top:150px;
     }
     .img_wrap > span {
         font-size:3.7rem;
@@ -2003,7 +2008,7 @@ footer {
     }
     .img_wrap p {
         font-size:2.5rem;
-        line-height:1.208;  /* 29 / 24  */
+        line-height:1.208;
         width:80.99%;  /* 622 / 768 */
         margin-bottom:33px;
     }
@@ -2012,27 +2017,23 @@ footer {
         height:70px;      
         line-height:66px;
         border-radius:3px;
-        font-size:2rem;
+        font-size:2.3rem;
     }
 
 
     /* story - 1024 */
     #story {
-        padding:36px 0 45px;
+        padding:48px 0 40px;
     }
     .story_inner {
-        width:80.99%;
-        margin:0 auto;
+        width:82.129%;
     }
     .story_inner article {
-        float:left;
-        background-size:274px;
-        width:49.518%;  /* 308 / 622 */
-        height:375px;
-        border-width:2px;
-        border-radius:4px;
-        margin-right:0.965%; /* 6/622 이나 50- 49.518 0.001차이 나지만 3자리 적용안됨*/
-        padding:22px;
+        background-size:365px;
+        width:48.751%;  
+        height:500px;
+        margin-right:2.498%; 
+        padding:32px 37px;
     }
     .story_inner article:nth-child(2) {
         margin-right:0; 
@@ -2042,47 +2043,36 @@ footer {
         display:block;
     }
     .story_inner .fresh {
-        background-size:293px;
+        background-size:390px;
     }
     .story_inner .classic {
-        background-size:239px;
+        background-size:318px;
 
     }
     .story_inner article h3 {
-        margin-bottom:10px;
+        width:96px;
+        height:41px;
+        margin-bottom:12px;
+    }
+    .story_inner article strong {
+        font-size:2.5rem;
+        line-height:1.32;  
     }
     .story_inner article p {
-        line-height:1.176;  /* 20 / 17 */
-        font-size:1.7rem;
-        margin:8px 0 29px;
+        font-size:2rem;
+        margin:12px 0 38px;
     }
     .story_inner article a {
-        display:inline-block;
-        width:auto;
-        height:45px;
-        line-height:41px;
-        font-size:1.5rem;
-        padding:0 20px 0 16px;
+        height:55px;
+        line-height:51px;
+        font-size:1.9rem;
+        padding:0 28px 0 21px;
     }
     .story_inner article a:after {
-        width:15px;
-        height:15px;
-        margin-left:18px;
+        width:18px;
+        height:18px;
+        margin-left:22px;
         vertical-align:-2px;
-    }
-    #story .btn_pause {
-        width:14px;
-        height:14px;
-        margin:0 7px;
-    } 
-    #story .indicator {
-        width:112px;
-        margin:30px auto;
-    }
-    #story .indicator li {
-        width:14px;
-        height:14px;
-        margin:0 7px;
     }
 
     /* cast - 1024 */
@@ -2100,7 +2090,7 @@ footer {
         width:38.81%; /* 326 / 840*/
         height:250px;
         text-align:left;
-        padding-top:0;
+        padding-top:3px;
         margin-bottom:0; 
     }
     .cast_inner .title h2 {
@@ -2135,7 +2125,7 @@ footer {
     .cast_inner .banner h3,
     .cast_inner .section_slider a h3 {
         font-size:3.3rem;
-        font-weight:normal;
+        font-weight:400;
     }
     .cast_inner .banner:last-child h3 {
         color:#fff; 
@@ -2161,7 +2151,7 @@ footer {
     .cast_inner .section_slider a p {
         font-size:1.7rem;
         color:#909090;
-        line-height:1.176; /* 20/17*/
+        line-height:1.25; 
         margin:9px 0 18px; 
     }
     .cast_inner .banner span,
@@ -2169,7 +2159,7 @@ footer {
         display:inline-block; 
         width:200px;
         height:50px;
-        line-height:50px; 
+        line-height:48px; 
         border-radius:2px;
         background-color:#00b5d8;
         color:#fff;
@@ -2177,6 +2167,7 @@ footer {
     }
     .cast_inner .banner:last-child span{
         background-color:#fff;
+        color:#333;
     }
     .cast_inner .banner {
         float:left;
@@ -2189,7 +2180,7 @@ footer {
         padding:39px 30px 0; 
         text-align:center;
     }
-    
+
     .cast_inner .banner:last-child {
         background:none;
         background-color:#02b5d6; 
@@ -2199,7 +2190,7 @@ footer {
     .cast_inner .banner h3 {}
     .cast_inner .banner p {
         font-size:2rem;
-        line-height:1.095; /* 23/21 */
+        line-height:1.15; 
         margin-bottom:18px; 
     }
     .cast_inner .banner:last-child p {
@@ -2209,6 +2200,490 @@ footer {
     .cast_inner .banner:after {
        display:none; 
     }
+
+    /* knowhow - 1024 */
+    #knowhow {
+        background:url(../img/cjw-bg-foodKnowhow.jpg) no-repeat right 550px/contain;
+        background-size:451px;
+        padding:74px 0 76px;
+        background-color:#f4f4f4;
+    }
+    .knowhow_inner {
+        padding-left:9.082%;
+    }
+    .knowhow_inner .title {
+        float:left;
+        width:34.979%;
+        height:250px;
+        text-align:left;
+        padding-top:3px;
+        margin-bottom:0; 
+        background:none;
+    }
+    .knowhow_inner .title h2 {
+        margin-bottom:29px;
+        color:#333;
+    }
+    .knowhow_inner .title a {
+        width:290px;
+        height:78px;
+        line-height:74px;
+        text-align:center; 
+    }
+    .knowhow_inner .title a:after {
+        margin-left:11px;
+    }
+    .knowhow_inner .section_slider {
+        float:right;
+        width:65.021%;
+        border:none;
+        margin:0;
+        padding:2px;
+    }
+    .knowhow_inner .section_slider div > span{
+        height:250px;
+    }
+   
+    .knowhow_inner .section_slider div a {
+        float:left;
+        width:61.056%;
+        height:250px;
+        padding:39px 36px 36px; 
+        
+    }
+    .knowhow_inner .section_slider i {
+        float:right;
+        width:38.944%;
+        height:250px;
+        border-top:2px solid #fff;
+        background:url(../img/cjw-img-cjwRecipe.jpg) no-repeat center/cover;
+    }
+    .knowhow_inner > .banner {
+        float:right;
+        width:39.7%;
+        height:250px;
+        border-radius:0;
+        margin:0 25.321% 0 0;
+        padding:39px 36px 0; 
+        text-align:center;
+        background-image:none;
+    }
+    .knowhow_inner .section_slider a h3,
+    .knowhow_inner .banner h3 {
+        font-size:3.3rem;
+        font-weight:400;
+        margin-bottom:0;
+    }
+    .knowhow_inner .section_slider a h3:after,
+    .knowhow_inner > .banner h3:after {
+        content:"";
+        display:block;
+        margin:16px auto 14px;
+        width:60px;
+        height:3px;
+        background-color:rgba(255,255,255,.7);
+    }
+    
+    .knowhow_inner .section_slider a h3:after {
+        background-color:rgba(252,181,77,.7);
+    }
+    .knowhow_inner .section_slider div strong,
+    .knowhow_inner > .banner p {
+        display:inline-block;
+        font-size:1.7rem;
+        line-height:1.25; 
+        margin-bottom:18px; 
+    }
+ 
+    .knowhow_inner .section_slider a span,
+    .knowhow_inner .banner span {
+        display:inline-block; 
+        width:200px;
+        height:50px;
+        line-height:48px; 
+        border-radius:2px;
+        background-color:#fff;
+        font-size:2rem;
+    }
+    .knowhow_inner .section_slider a span{
+        color:#fff;
+        background-color:#fcb54d;
+    }
+    .knowhow_inner .banner:after {
+        right:20px;
+        margin-top:-23px;
+        width:25px;
+        height:47px;
+    }
+    .knowhow_inner > .banner:after {
+        display:none; 
+    }
+    .knowhow_inner .banner.pc {display:block;}
+
+    .knowhow_inner .banner_wrap {
+        float:left;
+        width:34.979%;
+        margin-top:-250px;
+    }
+    .knowhow_inner .banner_wrap .banner {
+        background-image:none;
+        margin:0; 
+        width:100%; 
+        height:125px;
+        padding:54px 0 41px 19px;
+        border-radius:0;
+    }
+    .knowhow_inner .banner_wrap .banner:first-child {
+        border-radius:5px 0 0 0;
+    }
+    .knowhow_inner .banner_wrap .banner:last-child {
+        border-radius:0 0 0 5px;
+    }
+    .knowhow_inner .banner_wrap p {
+        position:absolute;
+        top:32px;
+        left:19px;
+        font-size:1.4rem;
+    }
+    .knowhow_inner .banner_wrap .banner:before {
+        position:absolute;
+        top:0;
+        left:19px;
+        content:"";
+        width:87.692%;
+        height:2px;
+        background-color:#fff;
+    }
+    .knowhow_inner .banner_wrap .banner:first-child:before{display:none;} 
+
+    /* friends -1024 */
+
+    #friends {
+        background:url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+        padding:74px 0 76px; 
+    }
+    .friends_inner {
+        width:82.031%;  /* 840 / 1024 */
+        margin:0 auto;
+    }
+    .friends_inner .title {
+        float:left;
+        background:none;
+        width:61.071%;
+        height:250px;
+        text-align:left;
+        padding-top:0;
+        margin-bottom:0; 
+    }
+    .friends_inner .title h2 {
+        font-size:7rem;
+        margin-bottom:28px;
+    }
+    .friends_inner .title a {
+        text-align:center;
+        width:290px;
+        height:78px;
+        line-height:74px; 
+    }
+    .friends_inner .title a:after{
+        margin-left:11px; 
+    }
+    .friends_inner .banner {
+        width:38.929%;
+        height:250px;
+        margin:0;
+    }
+    .friends_inner .friends_b {
+        float:left;
+        width:61.071%;
+        height:484px;
+        padding:35px 92px 113px 31px;
+    }
+
+    .friends_inner .friends_b .bg {
+        width:172px;
+        height:172px;
+        right:25px;
+        bottom:32px;
+    }
+    .friends_inner .friends_b h3 {
+        font-size:1.8rem;
+        font-weight:400;
+        color:#fff;
+        margin-bottom:32px;
+    }
+    .friends_inner .friends_b strong {
+        font-size:3.3rem;
+    }
+    .friends_inner .friends_b .line {
+        width:67.319%;
+        height:3px;
+        margin:28px 0 25px;
+    }
+    .friends_inner .friends_b p {
+        font-size:2rem;
+        line-height:1.25;
+        margin-bottom:27px; 
+        color:#222;
+    }
+    .friends_inner .banner:nth-of-type(2) span ,
+    .friends_inner .friends_b span:last-child {
+        display:inline-block; 
+        width:200px;
+        height:50px;
+        line-height:48px; 
+        border-radius:2px;
+        background-color:#fff;
+        font-size:2rem;
+    }
+
+    .friends_inner .banner:nth-of-type(2) {
+        float:right;
+        padding:43px 45px 35px;
+        background-image:none;
+        text-align:center;
+        margin-top:-250px;
+    }
+    .friends_inner .banner:nth-of-type(2) h3 {
+        font-size:1.6rem;
+        margin-bottom:16px;
+    }
+    .friends_inner .banner:nth-of-type(2) p {
+        font-size:2rem;
+        line-height:1.15;
+        margin-bottom:22px;
+    }
+    .friends_inner .banner:after {
+       display:none;
+    }
+   
+    .friends_inner .box {
+        float:right;
+        width:38.929%;
+        margin:0;
+    }
+    .friends_inner .box .bannerBox {
+        width:100%;
+        height:242px;
+        padding:29px 24px 0;
+    }
+    .friends_inner .bannerBox:last-child {
+        border-top:none;
+        border-left:2px solid #cfcfcf;
+    }
+    .friends_inner .box .bannerBox h3 {
+        padding-top:125px;
+        background-size:113px;
+        font-size:2.4rem;
+        font-weight:400;
+        margin-bottom:8px;
+    }
+    .friends_inner .box .bannerBox:last-child h3 {
+        background-position:center 10px;
+        background-size:106px;
+    }
+    .friends_inner .box .bannerBox p {
+        font-size:1.6rem;
+        line-height:1.25;
+        color:#909090;
+    }
+
+
+
+    /* sns - 1024 */
+    #sns {
+        padding:90px 0 92px;
+        background:url(../img/cjw-bg-sns1.png) no-repeat right -28px/313px,
+        url(../img/cjw-bg-sns2.png) no-repeat left 115%/ 460px;
+       
+    }
+    .sns_inner {
+        width:82.031%;
+        margin:0 auto;
+    }
+    .sns_inner .title {
+        margin-bottom:37px;
+    }
+    .sns_inner .title h2 {
+        margin-bottom:34px; 
+    }
+    .sns_inner .title p {
+        font-size:2.9rem;
+    }
+    .sns_inner .sns_link {
+        width:556px;
+        margin-bottom:68px;
+    }
+    .sns_inner .sns_link ul li {
+        width:auto;
+        margin-right:44px;
+    }
+    .sns_inner .sns_link ul li:last-child {
+        width:auto; 
+        margin-right:0;
+    } 
+    .sns_inner .sns_link ul li a {
+        width:56px;
+        height:56px;
+    }
+    .sns_inner .sns_con {
+        width:auto;
+        border:none;
+    }
+    .sns_inner .sns_con a {
+        width:89.048%;
+        height:250px;
+        border:2px solid #f8f7f7; 
+    }
+    .sns_inner .sns_con a span {
+        width:43.717%;
+    }
+    .sns_inner .sns_con a:last-child {
+        float:right;
+        margin-top:-2px;
+    }
+    .sns_inner .sns_con a .text {
+        width:56.283%;
+        padding:43px 25px 0 35px;
+        
+    }
+  
+    .sns_inner .sns_con a .text h3 {
+        font-size:2rem;
+        height:43px;
+        line-height:43px;
+    }
+    
+    .sns_inner .sns_con a .text p {
+        left:35px;
+        bottom:41px;
+        font-size:2.4rem;
+        line-height:1.16;
+        padding-right:43px; 
+    }
+
+    /* footer - 1024 */
+    footer {
+        border-width:2px;
+        
+    }
+    .link_wrap {}
+    .link_wrap a.mobile,.link_wrap ul li.mobile {display:none;}
+    .link_wrap ul {border-bottom:2px solid rgba(207,207,207,.5);}
+    .link_wrap ul li {
+        display:inline-block; 
+        border:none;
+    }
+    .copy_wrap .copy_inner > span a {
+        border:none;
+        height:auto;
+        line-height:9px;
+    }
+    
+    .link_wrap ul {
+        text-align:center;
+    }
+    .link_wrap ul li {
+        float:none;
+        width:auto;
+        height:98px;
+        line-height:98px;
+    }
+    .link_wrap ul li:nth-child(odd) {
+        border:none;
+    }
+    .link_wrap ul li.pc {display:inline-block;}
+    .link_wrap ul li:after {
+        display:inline-block;
+        content:"|";
+        margin:0 23px;
+        vertical-align:2px;
+        font-size:1.8rem;
+    }
+    .link_wrap ul li a {
+        display:inline-block; 
+        font-size:1.8rem;
+        padding-left:0;
+        color:#333;
+    }
+    .link_wrap ul li:last-child a {
+        color:#02b5d6;
+    }
+   
+    .link_wrap ul li:last-child:after {
+        display:none;
+    }
+   
+
+    .copy_wrap {}
+    .copy_wrap .copy_inner {padding:0 8.936%;}
+    .copy_wrap .copy_inner > span {
+        float:right;
+    }
+    .copy_wrap .copy_inner > span a {
+        width:auto;
+        font-size:1.2rem;
+        padding-left:0;
+    }
+    .copy_wrap .copy_inner > span a:before {
+        display:block;
+        width:65px;
+        height:64px;
+        margin-right:31px; 
+        margin-bottom:9px;
+    }
+    .copy_wrap .copy_inner > span a:last-child:before {
+        width:64px;
+        height:85px;
+    }
+    .copy_wrap .copy_inner > span a span {
+        margin-left:-8px;
+    }
+    .copy_wrap .copy_inner > span a:first-child {
+        border:none;
+    }
+    .copy_wrap .copy {
+        text-align:left;
+        margin-top:44px;
+    }
+    .copy_wrap .copy > span {
+        float:left;
+        width:66px;
+        margin-bottom:0; 
+        margin-right:28px;
+    }
+    .copy_wrap .copy p {
+        display:inline-block;
+        width:500px;
+        margin-top:10px;
+    }
+    .copy_wrap .copy p span {
+        display:inline-block;
+        font-size:1.2rem;
+    }
+    .copy_wrap .copy p span:first-child:after,
+    .copy_wrap .copy p span:nth-of-type(2n):after {
+        content:"ㅣ";
+        color:#666;
+        margin:0 13px;
+    }
+    .copy_wrap .copy p span:nth-of-type(5):after {
+        display:none;
+    }
+    .copy_wrap .copy p span:last-child {
+        display:inline-block;
+    }
+    
+    .copy_wrap .copy p:last-child {
+        font-size:1.3rem;
+        background-color:transparent;
+        height:auto;
+        line-height:1; 
+        color:#666; 
+        margin-top:10px;
+        margin-bottom:64px;
+    }
+
 }
 
 /* pc - 1276 */
@@ -2331,6 +2806,7 @@ footer {
         width:386px;
         height:515px;
         margin-right:56px;
+        padding:32px 37px;
     }
     .story_inner article:nth-child(2) {
         margin-right:56px;
