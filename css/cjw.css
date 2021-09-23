@@ -351,6 +351,23 @@ body.no-scroll {
 	font-size:1.5rem;
 	color:#fff;
 }
+.slider:after {
+    display:block;
+    content:"";
+    width:20px;
+    height:46px;
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    background:url(../img/cjw-icon-mouse.png) no-repeat center/contain;
+    opacity:.6;
+    animation:scrollani infinite ease 1.5s;
+}
+@keyframes scrollani {
+    0%, 100% {transform:translate(-50%, 0);}
+    50% {transform:translate(-50%, 10px);}
+}
 
 /* section - mobile */
 .section {
@@ -485,7 +502,7 @@ body.no-scroll {
 }
 #story .indicator {
     width:80px;
-    margin:20px auto;
+    margin:20px auto 0;
 }
 #story .indicator li {
     float:left;
@@ -1224,7 +1241,7 @@ footer {
     }
     .img_wrap {
         height:750px;
-        padding-top:190px;
+        padding-top:200px;
     }
     .img_wrap > span {
         font-size:3rem;
@@ -1246,7 +1263,11 @@ footer {
         border-radius:3px;
         font-size:2.1rem;
     }
-
+    .slider:after {
+        width:26px;
+        height:60px;
+        bottom:50px;
+    }
     
     /* section - 768  */
     .section {
@@ -1324,16 +1345,11 @@ footer {
         margin-left:18px;
         vertical-align:-2px;
     }
-    #story .btn_pause {
-        width:14px;
-        height:14px;
-        margin:0 7px;
-    } 
     #story .indicator {
         width:112px;
-        margin:30px auto;
+        margin:30px auto 0;
     }
-    #story .indicator li {
+    #story .btn_pause, #story .indicator li {
         width:14px;
         height:14px;
         margin:0 7px;
@@ -1743,12 +1759,15 @@ footer {
     }
     .t_menu li {
         float:left;
+        position:relative;
     }
     .t_menu li:before {
+        position:absolute;
+        top:0;
+        left:13px;
         content:"|";
-        font-size:1.4rem;
+        font-size:1.3rem;
         color:#808080; 
-        margin:0 14px;
     }
     .t_menu li:first-child:before {
         display:none;
@@ -1756,6 +1775,7 @@ footer {
     .t_menu li a {
         font-size:1.4rem;
         color:#808080; 
+        margin-left:30px;
     }
     .t_menu li:first-child a{
         color:#00b4d8;
@@ -1768,7 +1788,6 @@ footer {
         height:auto;
         border-top:1px solid #cfcfcf;
     }
-    header.on #navWrap {border-top:0;}
     .nav_inner {
         position:static;
         width:88.477%;  /* 906 / 1024 */
@@ -1787,11 +1806,6 @@ footer {
         height:42px;
         margin-top:18px; 
     }
-    header.on > .nav_inner > div a:nth-child(1) {
-        width:110px;
-        height:39px;
-        margin-top:17px;
-    }
     .nav_inner .gnb {
         float:right;
         border-top:none;
@@ -1805,9 +1819,9 @@ footer {
     }
     .nav_inner .gnb > li:before {
         content:"|";
-        font-size:1.6rem;
+        font-size:1.7rem;
         vertical-align:2px;
-        margin:0 20px;
+        margin:0 16px 0 20px;
     }
     .nav_inner .gnb > li:first-child:before {
         display:none;
@@ -1819,11 +1833,6 @@ footer {
         border-bottom:none;
         padding-left:0;
         font-size:1.8rem;
-    }
-    header.on .nav_inner .gnb > li > a {
-        height:70px;
-        line-height:70px;
-        font-size:1.7rem; 
     }
         
     .nav_inner .gnb > li > a:hover,
@@ -1860,9 +1869,27 @@ footer {
         background-color:#fff;
         border-top:1px solid #cfcfcf;
     }
+
+    header.on #navWrap {border-top:0;}
+    header.on .nav_inner > div a:nth-child(1) {
+        width:110px;
+        height:39px;
+        margin-top:17px;
+    }
+    header.on .nav_inner .gnb > li:before {
+        font-size:1.6rem;
+        vertical-align:2px;
+        margin:0 20px 0 23px;
+    }
+    header.on .nav_inner .gnb > li > a {
+        height:70px;
+        line-height:70px;
+        font-size:1.7rem; 
+    }
     header.on .nav_inner .sub_wrap {
         top:70px;
-        }
+    }
+
     .nav_inner .sub_inner {
         width:88.477%;
         margin:0 auto;
@@ -1997,29 +2024,32 @@ footer {
 
     .img_wrap {
         height:638px;
-        padding-top:150px;
+        padding-top:137px;
     }
     .img_wrap > span {
         font-size:3.7rem;
     }
     .img_wrap h2 {
         font-size:8.3rem;
-        margin:23px 0 23px;
+        margin:16px 0 24px;
     }
     .img_wrap p {
         font-size:2.5rem;
-        line-height:1.208;
-        width:80.99%;  /* 622 / 768 */
-        margin-bottom:33px;
+        line-height:1.24;
+        width:78.613%;
+        margin-bottom:45px;
     }
     .img_wrap a {
         width:300px; 
-        height:70px;      
-        line-height:66px;
-        border-radius:3px;
+        height:80px;      
+        line-height:77px;
         font-size:2.3rem;
     }
-
+    .slider:after {
+        width:30px;
+        height:69px;
+        bottom:30px;
+    }
 
     /* story - 1024 */
     #story {
@@ -2033,7 +2063,7 @@ footer {
         width:48.751%;  
         height:500px;
         margin-right:2.498%; 
-        padding:32px 37px;
+        padding:30px 35px;
     }
     .story_inner article:nth-child(2) {
         margin-right:0; 
@@ -2074,7 +2104,16 @@ footer {
         margin-left:22px;
         vertical-align:-2px;
     }
-
+    #story .indicator {
+        width:144px;
+        margin:46px auto 0;
+    }
+    #story .btn_pause, #story .indicator li {
+        width:16px;
+        height:16px;
+        margin:0 10px;
+    }
+  
     /* cast - 1024 */
     #cast {
         background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
@@ -2149,7 +2188,7 @@ footer {
         font-size:2rem;
     }
     .cast_inner .section_slider a p {
-        font-size:1.7rem;
+        font-size:1.6rem;
         color:#909090;
         line-height:1.25; 
         margin:9px 0 18px; 
