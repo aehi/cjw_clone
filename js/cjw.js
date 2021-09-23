@@ -1,7 +1,20 @@
 $(function(){
+        var hd = $('header'),
+            win = $(window);
+
+        win.scroll(function(){
+            win = $(this);
+            win_top = win.scrollTop();
+
+            if(win_top > 0){
+                hd.addClass('on');
+            }else{
+                hd.removeClass('on');
+            };
+        });    
         $('.gnb > li > a').click(function(){
+            $(this).parent().siblings().removeClass('open')
             $(this).parent().toggleClass('open')
-            
         })
         $('.btn_nav').click(function(){
             $(this).toggleClass('on');
