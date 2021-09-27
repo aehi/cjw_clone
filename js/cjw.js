@@ -1,130 +1,103 @@
 $(function(){
-        var hd = $('header'),
-            win = $(window);
+    /* 헤더 fixed */
 
-        win.scroll(function(){
-            win = $(this);
-            win_top = win.scrollTop();
+    var hd = $('header'),
+        win = $(window);
 
-            if(win_top > 0){
-                hd.addClass('on');
-            }else{
-                hd.removeClass('on');
-            };
-        });    
-        $('.gnb > li > a').click(function(){
-            $(this).parent().siblings().removeClass('open')
-            $(this).parent().toggleClass('open')
-        })
-        $('.btn_nav').click(function(){
-            $(this).toggleClass('on');
-            $('#navWrap').toggleClass('on');
-            $('body').toggleClass('no-scroll');
-        });
-        $('.sch_wrap .sch_on').click(function(){
-            $('.sch_form').show();
-        });
-        $('.sch_wrap .sch_off').click(function(){
-            $('.sch_form').hide();
-        });
+    win.scroll(function(){
+        win = $(this);
+        win_top = win.scrollTop();
 
+        if(win_top > 0){
+            hd.addClass('on');
+        }else{
+            hd.removeClass('on');
+        };
+    });    
 
-
-        // var swiper = new Swiper('#story', {
-        //     slidesPerView:3,
-        //     spaceBetween:56,
-        //     speed:500,
-        //     loop:true,
-        //     autoplay: {
-        //         delay: 3000,
-        //         disableOnInteraction:false,
-        //     },
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         clickable: true,
-        
-        //     },
-        //     navigation: {
-        //         nextEl: '.swiper-button-next',
-        //         prevEl: '.swiper-button-prev',
-        //     },
-  
-        //     breakpoints: {
-        //         1276: {
-        //             slidesPerView:2,
-        //             spaceBetween:17,
-        //         },
-        //         768: {
-        //             slidesPerView:2,
-        //             spaceBetween:6,
-        //         },
-        //         375: {
-        //             slidesPerView:1,
-        //             spaceBetween:32,
-        //         }
-        //     }
-          
-        //   });
-        //   $('.btn_pause').on('click', function(){
-        //         var $this = $(this);
-        
-        //         if ( $this.hasClass('on') ) {
-        //             $this.removeClass('on').text('재생');
-        //             swiper.autoplay.start();
-        //         }else {
-        //             $this.addClass('on').text('정지');
-        //             swiper.autoplay.stop();
-        //         }
-        //     });
-    // $('#story .story_inner').slick({
-    //     slidesToShow:3,
-    //     slidesToScroll:1,
-    //     autoplay:true,
-    //     autoplaySpeed:3000,
-    //     speed:500,
-    //     arrows:true, 
-    //     dots:true,
-    //     prevArrow:"<button class='prev'>이전</button>",    
-    //     nextArrow:"<button class='next'>다음</button>",    
-    //     responsive:[
-	// 				{
-	// 					breakpoint:1276, 
-	// 					settings:{
-	// 						slidesToShow:2,
-    //                         arrows:false 
-	// 					}
-	// 				},
-    //                 {
-	// 					breakpoint:768,
-	// 					settings:{
-    //                         slidesToShow:1,
-    //                         arrows:false
-	// 					}
-	// 				},
-    //                 {
-    //                     breakpoint:375,
-    //                     settings: {
-    //                         slidesToShow: 1,
-    //                         arrows:false,
-    //                         pauseOnHover:false
-    //                     }
-    //                 }
-            
-	// 			]
-    // });
 
     
-    // $('.btn_pause').on('click', function(){
-    //     var $this = $(this),
-    //         si = $('.story_inner');
+    /* 메뉴 햄버거버튼 클릭 */
 
-    //     if ( $this.hasClass('on') ) {
-    //         $this.removeClass('on').text('재생');
-    //         si.slick('slickPause');
-    //     }else {
-    //         $this.addClass('on').text('정지');
-    //         si.slick('slickPlay');
-    //     }
-    // });
+    $('.btn_nav').click(function(){
+        $(this).toggleClass('on');
+        $('#navWrap').toggleClass('on');
+        
+    });
+    
+    
+    /* 메뉴 햄버거버튼 클릭 */
+    $('.sch_wrap .sch_on').click(function(){
+        $('.sch_form').show();
+    });
+    $('.sch_wrap .sch_off').click(function(){
+        $('.sch_form').hide();
+    });
+
+    /* story 슬라이더 */
+    $('#story .story_slider').slick({
+        slidesToShow:3,
+        slidesToScroll:1,
+        autoplay:true,
+        autoplaySpeed:3000,
+        speed:500,
+        arrows:true, 
+        dots:true,
+        appendDots:$('.indicator'),  
+        dotsClass:'dots',
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive:[
+                    {
+                        breakpoint:1600, 
+                        settings:{
+                            arrows:true 
+                        }
+                    },
+                    {
+                        breakpoint:1300, 
+                        settings:{
+                            slidesToShow:2,
+                            arrows:false 
+                        }
+                    },
+                    {
+                        breakpoint:768,
+                        settings:{
+                            slidesToShow:1,
+                            arrows:false
+                        }
+                    },
+                    {
+                        breakpoint:375,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows:false,
+                            pauseOnHover:false
+                        }
+                    }
+            
+                ]
+        });
+        
+        $('.btn_pause').on('click', function(){
+            var $this = $(this),
+                si = $('.story_slider');
+    
+            if ( $this.hasClass('on') ) {
+                $this.removeClass('on').text('재생');
+                si.slick('slickPause');
+            }else {
+                $this.addClass('on').text('정지');
+                si.slick('slickPlay');
+            }
+        });
+
+        $('#story .prev').click(function(){
+            si.slick('slickNext');
+        });
+        $('#story .next').click(function(){
+            si.slick('slickNext');
+        });
    
 });
