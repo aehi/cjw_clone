@@ -16,6 +16,43 @@ $(function(){
     });    
 
 
+    /* 메뉴 클릭, 마우스엔터 */
+
+    var mq = window.matchMedia('(max-width:1024px)'),
+        lia = $('.gnb > li > a');
+        
+    mediaqueryresponse(mq);
+    mq.addListener(mediaqueryresponse);
+
+    function navClick (){
+        $(this).parent().siblings().removeClass('open');
+        $(this).parent().toggleClass('open');
+    }
+    function navEnter() {
+        $('.sub_wrap:not(:animated)').slideUp(300);
+        $(this).next().stop().slideDown(300);
+        $(this).parent().siblings().removeClass('open');
+        $(this).parent().addClass('open');
+        
+    }
+    function navLeave(){
+        $(this).find('.sub_wrap').stop().slideUp(300);
+        $(this).children().removeClass('open');
+    }
+
+    function mediaqueryresponse(mq){
+        
+        
+        if (mq.matches) {
+            lia.off().on('click',navClick);
+            
+        } else {
+            lia.on('mouseenter',navEnter);
+            $('.gnb').on('mouseleave',navLeave);
+
+        };
+        
+    };
     
     /* 메뉴 햄버거버튼 클릭 */
 
