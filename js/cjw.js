@@ -27,6 +27,7 @@ $(function(){
     function navClick (){
         $(this).parent().siblings().removeClass('open');
         $(this).parent().toggleClass('open');
+        return false;
     }
     function navEnter() {
         $('.sub_wrap:not(:animated)').slideUp(300);
@@ -44,12 +45,10 @@ $(function(){
         
         
         if (mq.matches) {
-            lia.off().on('click',navClick);
-            
+            lia.on('click',navClick);
         } else {
             lia.on('mouseenter',navEnter);
             $('.gnb').on('mouseleave',navLeave);
-
         };
         
     };
