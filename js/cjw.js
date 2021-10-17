@@ -20,39 +20,41 @@ $(function(){
 
     var mq = window.matchMedia('(max-width:1024px)'),
         lia = $('.gnb > li > a');
-        
-    mediaqueryresponse(mq);
-    mq.addListener(mediaqueryresponse);
+    
+        mediaqueryresponse(mq);
+        mq.addListener(mediaqueryresponse); 
 
-    function navClick (){
-        $(this).parent().siblings().removeClass('open');
-        $(this).parent().toggleClass('open');
-        return false;
-    }
-    function navEnter() {
-        $('.sub_wrap:not(:animated)').slideUp(300);
-        $(this).next().stop().slideDown(300);
-        $(this).parent().siblings().removeClass('open');
-        $(this).parent().addClass('open');
-        
-    }
-    function navLeave(){
-        $(this).find('.sub_wrap').stop().slideUp(300);
-        $(this).children().removeClass('open');
-    }
 
     function mediaqueryresponse(mq){
+        function navClick (){
         
-        
+            $(this).parent().siblings().removeClass('open');
+            $(this).parent().toggleClass('open');
+            return false;
+        }
+        function navEnter() {
+            $('.sub_wrap:not(:animated)').slideUp(300);
+            $(this).next().stop().slideDown(300);
+            $(this).parent().siblings().removeClass('open');
+            $(this).parent().addClass('open');
+            
+        }
+        function navLeave(){
+            $(this).find('.sub_wrap').stop().slideUp(300);
+            $(this).children().removeClass('open');
+        }
         if (mq.matches) {
-            lia.on('click',navClick);
+            lia.off().click(navClick);
         } else {
             lia.on('mouseenter',navEnter);
             $('.gnb').on('mouseleave',navLeave);
+            
         };
         
     };
     
+    
+
     /* 메뉴 햄버거버튼 클릭 */
 
     $('.btn_nav').click(function(){
@@ -65,9 +67,11 @@ $(function(){
     /* 메뉴 햄버거버튼 클릭 */
     $('.sch_wrap .sch_on').click(function(){
         $('.sch_form').show();
+        $('.btn_nav').hide();
     });
     $('.sch_wrap .sch_off').click(function(){
         $('.sch_form').hide();
+        $('.btn_nav').show();
     });
 
     /* story 슬라이더 */
